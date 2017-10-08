@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 为这个mapper指定一个唯一的namespace,namespace的值习惯上设置包名+sql映射文件名，这样就能够保证namespace的值是唯一的 -->
+<mapper namespace="com.study.mapping.userMapper">
+
+  <resultMap type="com.study.pojo.User" id="UserResult">
+    <id column="id"  property="id"/>
+    <result column="username" property="username"/>
+    <result column="password" property="password"/>
+    <result column="administrator" property="administrator"/>
+  </resultMap>
+  <!-- 属性
+  id:唯一（一般是dao接口中的方法名）
+  parameterType: 查询时使用的参数类型
+  resultType:查询返回的结果集类型
+  //resultType="com.study.pojo.User"即表示将查询结果封装成一个User类的对象返回
+  -->
+  <select id="selectUserById"  parameterType="int" resultMap="UserResult">
+    SELECT * FROM user WHERE id=#{id}
+  </select>
+  
+</mapper>

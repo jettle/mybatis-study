@@ -1,0 +1,16 @@
+*总结：
+1.项目结构（JavaWeb）
+com.study.dao
+——UserMapper
+
+com.study.mapping
+——userMapper.xml
+
+com.study.pojo
+——User.java
+    
+          
+1.Mybatis原理：（Thinking  of  Mybatis for me）
+
+UserMapper ——》Mybatis(Configuration——》userMapper.xml)——》Sqlsession
+                                                                                                                        
