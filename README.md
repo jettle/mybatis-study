@@ -18,4 +18,4 @@
           
 3.Mybatis原理：（Thinking  of  Mybatis for me）
 
- UserMapper ——》Mybatis(Configuration——》userMapper.xml)——》Sqlsession
+ UserMapper ——> Mybatis(Configuration——> userMapper.xml)——> Sqlsession
